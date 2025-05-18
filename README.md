@@ -1,11 +1,11 @@
-# 477
-Repo of the SIGMOD 2026 Round 2 Paper Number 477. \
+# Paper 477 (MBinder)
+Repo of the SIGMOD 2026 Round 2 Paper Number 477. 
 ## Introduction
 MBinder is a solution to leverage pre-trained models within the DBMS in the UDF manner. It achieves high speed and accuracy compared to other in-DBMS ML methods through two major components: Model selection and model synchronization. Model selection conducts a two-phased method to select an appropriate model for the given task, while the model synchronization method updates the model with increamental data to maintain model freshness. \
-![image](/MBinder/figure/Intro.png)
+![image](./MBinder/figure/Intro.png)
 ## Performance
 The following table demonstrates the overall performance of MBinders. MBinder saves large amount of time while achieving excellent performance on accuracy. \
-![image](/MBinder/figure/overall.png)
+![image](./MBinder/figure/overall.png)
 ## Quick Start
 MBinder is built on PostgreSQL 14.9 and Python 3.9. Note that users need to activate plpython3u extension in PostgreSQL to support ML UDFs of MBinder. After PostgreSQL and Python setups, load the UDFs and models into the PostgreSQL and MBinder is ready to bind appropriate model to the given task. MBinder supports pre-trained models that `git clone` from HuggingFace, since its model execution logic is built on *transformers* package.\
 **1. Model Selection** \
