@@ -30,4 +30,7 @@ One can manually activate model synchronization function to update the model to 
 CALL update_model_mix('bert_agnews', 'agnews');
 ```
 **3. Other Methods** \
-We also provide UDFs other methods in this repo. For example, `/MBinder/src/selection/UDFs/TRAILS.sql` is a model selection UDF that select models with TRAILS's method.
+We also provide UDFs other methods in this repo. For example, `/MBinder/src/selection/UDFs/TRAILS.sql` is a model selection UDF that select models with TRAILS's method. \
+## Latest Update
+We conduct an extra experiment that does not appear in the paper to demonstrate the effect of our second phase of model selection method. The figure below shows the accuracies of selected models with second phase method only (MBinder second phase or successive halving). MBinder selects better model as we design our method less likely to filter high performance models due to poor initial performance.
+![image](./MBinder/figure/phase2.png)
